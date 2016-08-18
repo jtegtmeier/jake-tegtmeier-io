@@ -48,7 +48,7 @@ app.post('/sendMail', function(req, res){
   var email = req.body.email;
   var message = req.body.message;
 
-  var mailer = nodemailer.createTransport('smtps://ghosttegtmeier:***REMOVED***@smtp.gmail.com');
+  var mailer = nodemailer.createTransport('smtps://ghosttegtmeier:BobGhost404@smtp.gmail.com');
   var mailOptions = {
     from: '"Jake.Tegtmeier.io" <ghosttegtmeier@gmail.com>', // sender address
     to: 'devtegtmeier@gmail.com', // list of receivers
