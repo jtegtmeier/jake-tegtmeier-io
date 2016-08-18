@@ -25,7 +25,7 @@
     "test": "",
     "start": "node server",
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --config ./webpack.production.config.js --progress --profile --colors",
-    "prod": "NODE_ENV=production PORT=5005 node server",
+    "prod": "NODE_ENV=production node server",
     "eslint": "eslint .",
     "jscs": "jscs ."
   },
