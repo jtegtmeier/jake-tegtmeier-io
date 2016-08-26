@@ -4,7 +4,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const emailConfig = require('./emailConfig.json')
+//const emailConfig = require('./emailConfig.json')
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 8989 : process.env.PORT;
