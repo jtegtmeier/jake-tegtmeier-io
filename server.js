@@ -49,10 +49,10 @@ app.post('/sendMail', function(req, res){
   var email = req.body.email;
   var message = req.body.message;
 
-  var mailer = nodemailer.createTransport('smtps://'+ ENV['EMAIL_NAME'] +':'+ ENV['EMAIL_PASS'] +'@smtp.gmail.com');
+  var mailer = nodemailer.createTransport('smtps://'+ process.env.EMAIL_NAME +':'+ process.env.EMAIL_PASS +'@smtp.gmail.com');
   var mailOptions = {
-    from: '"Jake.Tegtmeier.io" <'+ ENV['EMAIL_FROM'] +'>', // sender address
-    to: ""+ENV['EMAIL_TO'], // list of receivers
+    from: '"Jake.Tegtmeier.io" <'+ process.env.EMAIL_FROM +'>', // sender address
+    to: "" + process.env.EMAIL_TO, // list of receivers
     subject: subject, // Subject line
     text: "From:" + email + "----------->><br/>" + message, // plaintext body
   };
