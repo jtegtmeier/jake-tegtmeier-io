@@ -80,7 +80,7 @@ class App extends React.Component {
             </a>
             <a className={styles.imgtile} href="http://codepen.io/jtegtmeier/full/KrBwzb">
               <img src={require('./img/ColorToneMemory.png')}/>
-              <h3>Design Quote Cloud</h3>
+              <h3>Simon Game</h3>
             </a>
             <a className={styles.imgtile} href="http://codepen.io/jtegtmeier/full/pbRPJw">
               <img src={require('./img/DesignQuoteCloud.png')}/>
