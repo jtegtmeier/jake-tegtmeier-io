@@ -70,13 +70,25 @@ class App extends React.Component {
               <img src={require('./img/BlogTegtmeierio.png')}/>
               <h3>Personal Blog</h3>
             </a>
+            <a className={styles.imgtile} href="http://codepen.io/jtegtmeier/full/yJzEwN">
+              <img src={require('./img/PomodoroGraph.png')}/>
+              <h3>Pomodoro Graph</h3>
+            </a>
+            <a className={styles.imgtile} href="https://codepen.io/jtegtmeier/full/vKgjmz">
+              <img src={require('./img/LocalWeatherApp.png')}/>
+              <h3>Local Weather App</h3>
+            </a>
+            <a className={styles.imgtile} href="http://codepen.io/jtegtmeier/full/KrBwzb">
+              <img src={require('./img/ColorToneMemory.png')}/>
+              <h3>Design Quote Cloud</h3>
+            </a>
+            <a className={styles.imgtile} href="http://codepen.io/jtegtmeier/full/pbRPJw">
+              <img src={require('./img/DesignQuoteCloud.png')}/>
+              <h3>Design Quote Cloud</h3>
+            </a>
             <a className={styles.imgtile} href="http://codepen.io/jtegtmeier/full/PNQaqV">
               <img src={require('./img/JSCalc9000.png')}/>
               <h3>JavaScript Calculator</h3>
-            </a>
-            <a className={styles.imgtile} href="http://codepen.io/jtegtmeier/full/XdaRry/">
-              <img src={require('./img/MalcolmGladwellTributePage.png')}/>
-              <h3>A Tribute Site</h3>
             </a>
           </div>
         </Element>
