@@ -4,6 +4,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const emailConfig = require('./emailConfig.json')
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 8989 : process.env.PORT;
@@ -48,10 +49,10 @@ app.post('/sendMail', function(req, res){
   var email = req.body.email;
   var message = req.body.message;
 
-  var mailer = nodemailer.createTransport('smtps://ghosttegtmeier:BobGhost404@smtp.gmail.com');
+  var mailer = nodemailer.createTransport('smtps://'+ emailConfig.name +':'+ emailConfig.password +'@smtp.gmail.com');
   var mailOptions = {
-    from: '"Jake.Tegtmeier.io" <ghosttegtmeier@gmail.com>', // sender address
-    to: 'devtegtmeier@gmail.com', // list of receivers
+    from: '"Jake.Tegtmeier.io" <'+ emailConfig.from +'>', // sender address
+    to: ""+emailConfig.to, // list of receivers
     subject: subject, // Subject line
     text: "From:" + email + "----------->><br/>" + message, // plaintext body
   };

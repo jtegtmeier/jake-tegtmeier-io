@@ -51,7 +51,7 @@ class App extends React.Component {
             <h2 className={styles.bannerdescription}>
               (<span style={{color: '#63b9ff'}}>Jake</span>, <span style={{color: '#63b9ff'}}>Tegtmeier</span>)
               <span style={{color: '#deb284'}}> => </span>
-              {'{'}<span style={{color: '#b878cb'}}>return</span> <span style={{color: '#91b65e'}}>  'Web Developer'</span>{'}'}
+              {'{'}<span style={{color: '#b878cb'}}>return</span> <span style={{color: '#91b65e'}}>  'Front-End Developer'</span>{'}'}
             </h2>
           </div>
           <ul className={socstyles.soc}>
@@ -95,7 +95,7 @@ class App extends React.Component {
         <Element name="about" className={styles.about}>
           <h1>About</h1>
           <p>
-            I am a computer scientist deeply interested in the fields of web development, networking, and security. Designing web based software solutions with the user in mind is my main focus. There is nothing better then being able to holistically look at a problem, find an elegant model to represent it, and work towards its explanation.
+            I am a computer scientist deeply interested in the fields of web development, networking, and security. Designing web based software solutions with the user in mind is my main focus. There is nothing better then being able to holistically look at a problem, find an elegant model to represent it, and help your team work towards its explanation.
           </p>
         </Element>
         <Element name="contact" className={styles.contact}>
