@@ -4,39 +4,39 @@ import validator from 'validator';
 import Recaptcha from 'react-gcaptcha';
 
 import styles from './style.css';
-import socstyles from './social-icons.css'
+import socstyles from './social-icons.css';
 import Scroll from 'react-scroll';
 import FontAwesome from 'react-fontawesome';
 
-var Navlink    = Scroll.Link;
-var Element    = Scroll.Element;
-var Events     = Scroll.Events;
-var scroll     = Scroll.animateScroll;
+const Navlink    = Scroll.Link;
+const Element    = Scroll.Element;
+const Events     = Scroll.Events;
+const scroll     = Scroll.animateScroll;
 
 class App extends React.Component {
   constructor() {
     super();
   }
 
-  componentDidMount(){
-    Events.scrollEvent.register('begin', function(to, element) {
-      //console.log("begin", arguments);
+  componentDidMount() {
+    Events.scrollEvent.register('begin', function() {
+      // console.log("begin", arguments);
     });
 
-    Events.scrollEvent.register('end', function(to, element) {
-      //console.log("end", arguments);
+    Events.scrollEvent.register('end', function() {
+      // console.log("end", arguments);
     });
 
     scroll.scrollTo(0.5);
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     Events.scrollEvent.remove('begin');
     Events.scrollEvent.remove('end');
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div className={styles.app}>
         <nav className={styles.nav}>
           <Navlink activeClass={styles.navactive} className={styles.navlink} to="home" spy={true} smooth={true} duration={500} offset={-50}>Home</Navlink>
@@ -56,11 +56,11 @@ class App extends React.Component {
           </div>
           <ul className={socstyles.soc}>
             <a href="https://tegtmeier.io"><img className={styles.headshot} src={require('./img/headshot_bennington.jpg')}/></a>
-            <li><a className={socstyles.socgithub} href="https://github.com/jtegtmeier"><FontAwesome name='github'/></a></li>
-            <li><a className={socstyles.soclinkedin} href="https://www.linkedin.com/in/jacobtegtmeier"><FontAwesome name='linkedin'/></a></li>
-            <li><a className={socstyles.soctwitter} href="https://twitter.com/changerepeat"><FontAwesome name='twitter'/></a></li>
-            <li><a className={socstyles.socfcc} href="https://www.freecodecamp.com/jtegtmeier">(<FontAwesome name='fire'/>)</a></li>
-            <li><a className={socstyles.socemail} href="mailto:devtegtmeier@gmail.com"><FontAwesome name='envelope-o'/></a></li>
+            <li><a className={socstyles.socgithub} href="https://github.com/jtegtmeier"><FontAwesome name="github"/></a></li>
+            <li><a className={socstyles.soclinkedin} href="https://www.linkedin.com/in/jacobtegtmeier"><FontAwesome name="linkedin"/></a></li>
+            <li><a className={socstyles.soctwitter} href="https://twitter.com/changerepeat"><FontAwesome name="twitter"/></a></li>
+            <li><a className={socstyles.socfcc} href="https://www.freecodecamp.com/jtegtmeier">(<FontAwesome name="fire"/>)</a></li>
+            <li><a className={socstyles.socemail} href="mailto:devtegtmeier@gmail.com"><FontAwesome name="envelope-o"/></a></li>
           </ul>
         </Element>
         <Element name="projects" className={styles.projects}>
@@ -108,11 +108,11 @@ class App extends React.Component {
           </div>
           <hr/>
           <ul className={socstyles.soc}>
-            <li><a className={socstyles.socgithub} href="https://github.com/jtegtmeier"><FontAwesome name='github'/></a></li>
-            <li><a className={socstyles.soclinkedin} href="https://www.linkedin.com/in/jacobtegtmeier"><FontAwesome name='linkedin'/></a></li>
-            <li><a className={socstyles.soctwitter} href="https://twitter.com/changerepeat"><FontAwesome name='twitter'/></a></li>
-            <li><a className={socstyles.socfcc} href="https://www.freecodecamp.com/jtegtmeier">(<FontAwesome name='fire'/>)</a></li>
-            <li><a className={socstyles.socemail} href="mailto:devtegtmeier@gmail.com"><FontAwesome name='envelope-o'/></a></li>
+            <li><a className={socstyles.socgithub} href="https://github.com/jtegtmeier"><FontAwesome name="github"/></a></li>
+            <li><a className={socstyles.soclinkedin} href="https://www.linkedin.com/in/jacobtegtmeier"><FontAwesome name="linkedin"/></a></li>
+            <li><a className={socstyles.soctwitter} href="https://twitter.com/changerepeat"><FontAwesome name="twitter"/></a></li>
+            <li><a className={socstyles.socfcc} href="https://www.freecodecamp.com/jtegtmeier">(<FontAwesome name="fire"/>)</a></li>
+            <li><a className={socstyles.socemail} href="mailto:devtegtmeier@gmail.com"><FontAwesome name="envelope-o"/></a></li>
           </ul>
         </footer>
       </div>
@@ -121,94 +121,85 @@ class App extends React.Component {
 }
 
 class ContactForm extends React.Component{
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       screen: 1,
-      formError: "",
+      formError: '',
       formErrorStyle: {maxHeight: 0},
       validEmail: false,
       validSubject: false,
       validMessage: false,
       validCaptcha: false,
       captchaLoaded: false,
-      email: "",
-      subject: "",
-      message: "",
-    }
+      email: '',
+      subject: '',
+      message: '',
+    };
   }
 
-  emailEntered(event){
-    if(!validator.isEmail(event.target.value)){
+  emailEntered(event) {
+    if (!validator.isEmail(event.target.value)) {
       this.setState({validEmail: false});
-    }
-    else{
+    } else {
       this.setState({validEmail: true});
     }
     this.setState({email: validator.escape(event.target.value)});
   }
 
-  subjectEntered(event){
-    let len = event.target.value.length;
-    if(len > 30 || len < 1){
+  subjectEntered(event) {
+    const len = event.target.value.length;
+    if (len > 30 || len < 1) {
       this.setState({validSubject: false});
-    }
-    else{
+    } else {
       this.setState({validSubject: true});
       this.setState({subject: validator.escape(event.target.value)});
     }
-
   }
 
-  messageEntered(event){
-    let len = event.target.value.length;
-    if(len > 300 || len < 1){
+  messageEntered(event) {
+    const len = event.target.value.length;
+    if (len > 300 || len < 1) {
       this.setState({validMessage: false});
-    }
-    else{
+    } else {
       this.setState({validMessage: true});
       this.setState({message: validator.escape(event.target.value)});
     }
-
   }
 
-  captchaSolved(){
+  captchaSolved() {
     this.setState({validCaptcha: true});
   }
 
-  recaptchaDidLoad(){
+  recaptchaDidLoad() {
     this.setState({recaptchaLoaded: true});
     console.log('Captcha Loaded!!!!');
   }
 
-  allInputValid(){
-    if(!this.state.validEmail){
-      this.setState({formError: "Invalid Email."});
-    }
-    else if(!this.state.validSubject){
-      this.setState({formError: "Invalid Subject Text."});
-    }
-    else if(!this.state.validMessage){
-      this.setState({formError: "Invalid Message Text."});
-    }
-    else if(!this.state.validCaptcha){
-      this.setState({formError: "Captcha Not Solved. Try Refresh."});
-    }
-    else {
+  allInputValid() {
+    if (!this.state.validEmail) {
+      this.setState({formError: 'Invalid Email.'});
+    } else if (!this.state.validSubject) {
+      this.setState({formError: 'Invalid Subject Text.'});
+    } else if (!this.state.validMessage) {
+      this.setState({formError: 'Invalid Message Text.'});
+    } else if (!this.state.validCaptcha) {
+      this.setState({formError: 'Captcha Not Solved. Try Refresh.'});
+    } else {
       return true;
     }
     this.setState({formErrorStyle: {maxHeight: 60}});
-    window.setTimeout(function(){this.setState({formErrorStyle: {maxHeight: 0}});}.bind(this), 2000);
+    window.setTimeout(function() { this.setState({formErrorStyle: {maxHeight: 0}});}.bind(this), 2000);
     return false;
   }
 
-  submitForm(event){
-    if(this.allInputValid()){
-      var data = {
+  submitForm(event) {
+    if (this.allInputValid()) {
+      const data = {
         email: this.state.email,
         subject: this.state.subject,
         message: this.state.message,
-      }
+      };
 
       this.setState({screen: this.state.screen + 1});
 
@@ -226,13 +217,13 @@ class ContactForm extends React.Component{
           subject: this.state.subject,
           message: this.state.message,
         })
-      })
+      });
     }
   }
 
-  render(){
-    if(this.state.screen == 1){
-      return(
+  render() {
+    if (this.state.screen === 1) {
+      return (
         <div className={styles.formContainer}>
           <div className={styles.contactForm}>
             <h4 className={styles.formLabel}>Send me a message.</h4>
@@ -271,22 +262,20 @@ class ContactForm extends React.Component{
             </div>
           </div>
         </div>
-      )
-    }
-    else if(this.state.screen == 2){
-      return(
+      );
+    } else if (this.state.screen === 2) {
+      return (
         <div className={styles.contactSent}>
           <h2>Message sent!</h2>
           <h4>I'll get back to you as soon as I can.</h4>
         </div>
-      )
-    }
-    else{
-      return(
+      );
+    } else {
+      return (
         <div className={styles.contactError}>
           <h2>Contact Form error.</h2>
         </div>
-      )
+      );
     }
   }
 }
@@ -294,11 +283,11 @@ ContactForm.propTypes = {
   emailfield: React.PropTypes.string,
   subjectfield: React.PropTypes.string,
   messagefield: React.PropTypes.string,
-}
+};
 ContactForm.defaultProps = {
-  emailfield: "Email",
-  subjectfield: "Subject",
-  messagefield: "Message",
-}
+  emailfield: 'Email',
+  subjectfield: 'Subject',
+  messagefield: 'Message',
+};
 
 export default App;

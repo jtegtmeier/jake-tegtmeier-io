@@ -4,7 +4,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-//const emailConfig = require('./emailConfig.json')
+// const emailConfig = require('./emailConfig.json')
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 8989 : process.env.PORT;
@@ -44,27 +44,27 @@ if (isDeveloping) {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.post('/sendMail', function(req, res){
-  var subject = req.body.subject;
-  var email = req.body.email;
-  var message = req.body.message;
+app.post('/sendMail', function(req, res) {
+  const subject = req.body.subject;
+  const email = req.body.email;
+  const message = req.body.message;
 
-  var mailer = nodemailer.createTransport('smtps://'+ process.env.EMAIL_NAME +':'+ process.env.EMAIL_PASS +'@smtp.gmail.com');
-  var mailOptions = {
-    from: '"Jake.Tegtmeier.io" <'+ process.env.EMAIL_FROM +'>', // sender address
-    to: "" + process.env.EMAIL_TO, // list of receivers
+  const mailer = nodemailer.createTransport('smtps://' + process.env.EMAIL_NAME + ':' + process.env.EMAIL_PASS + '@smtp.gmail.com');
+  const mailOptions = {
+    from: '"Jake.Tegtmeier.io" <' + process.env.EMAIL_FROM + '>', // sender address
+    to: '' + process.env.EMAIL_TO, // list of receivers
     subject: subject, // Subject line
-    text: "From:" + email + "----------->><br/>" + message, // plaintext body
+    text: 'From:' + email + '----------->><br/>' + message, // plaintext body
   };
 
-  mailer.sendMail(mailOptions, function(error, info){
-    if(error){
+  mailer.sendMail(mailOptions, function(error, info) {
+    if (error) {
       return console.log(error);
     }
-    console.log('Message sent: ' + info.response)
-  })
-  res.end("yes");
-})
+    console.log('Message sent: ' + info.response);
+  });
+  res.end('yes');
+});
 
 app.listen(port, '0.0.0.0', function onStart(err) {
   if (err) {
