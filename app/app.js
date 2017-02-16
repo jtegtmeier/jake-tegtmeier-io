@@ -49,9 +49,9 @@ class App extends React.Component {
           <div className={styles.banner}>
             <h1 className={styles.bannertitle}>Jake.Tegtmeier.io</h1>
             <h2 className={styles.bannerdescription}>
-              (<span style={{color: '#63b9ff'}}>Jake</span>, <span style={{color: '#63b9ff'}}>Tegtmeier</span>)
+              (<span style={{color: '#63b9ff'}}>'Jake'</span>, <span style={{color: '#63b9ff'}}>'Tegtmeier'</span>)
               <span style={{color: '#deb284'}}> => </span>
-              {'{'}<span style={{color: '#b878cb'}}>return</span> <span style={{color: '#91b65e'}}>  'Front-End Developer'</span>{'}'}
+              {'{'}<span style={{color: '#b878cb'}}>return</span> <span style={{color: '#91b65e'}}>  'Full-Stack Developer'</span>{'}'}
             </h2>
           </div>
           <ul className={socstyles.soc}>
