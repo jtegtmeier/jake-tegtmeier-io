@@ -1,4 +1,4 @@
-html, body, .app{
+html, body, .app {
   height: 100vh;
   font-family: 'Roboto', sans-serif;
   min-width: 325px;
@@ -20,7 +20,7 @@ html, body, .app{
 }
 
 @media (max-width: 380px) {
-  .nav{
+  .nav {
     font-size: 3vw;
   }
 }
@@ -31,11 +31,11 @@ html, body, .app{
   cursor: pointer;
 }
 
-.navlink:hover{
+.navlink:hover {
   text-decoration: none;
 }
 
-.bloglink{
+.bloglink {
   padding: 15px;
   color: orange;
   text-decoration: underline;
@@ -89,7 +89,7 @@ html, body, .app{
   padding: 10px;
 }
 
-.headshot{
+.headshot {
   width: 20vh;
   max-width: 250px;
   margin-right: 20px;
@@ -97,7 +97,7 @@ html, body, .app{
   box-shadow: 0 0 50px 15px black;
 }
 
-.projects h1, .contact h1, .about h1{
+.projects h1, .contact h1, .about h1 {
   padding: 0;
   margin: 0;
   font-weight: bold;
@@ -111,19 +111,19 @@ html, body, .app{
   color: black;
   padding-top: 50px;
   position: relative;
-  background-color: #516a74;
+  background-color: #606c71;
   box-shadow: 0 0 100px 20px black;
   z-index: 8;
 }
 
-.projects .imgtiles{
+.projects .imgtiles {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
 
-.projects .imgtile{
+.projects .imgtile {
   max-width: 450px;
   margin: 3%;
   background: #CBCBCB;
@@ -132,29 +132,32 @@ html, body, .app{
   box-shadow: 0 0 20px black;
 }
 
-.projects img{
+.projects img {
   border-radius: 10px;
   margin-top: 5%;
   width: 80%;
 }
 
-.about{
+.about {
   display: block;
   position: relative;
   overflow: hidden;
   color: black;
-  background-color: #4e6132;
+  background-color: #748b52;
   padding-top: 50px;
   padding-bottom: 50px;
   box-shadow: 0 0 100px 20px black;
   z-index: 7;
 }
 
-.about p{
+.about p {
   padding: 20px;
   font-size: 18px;
+  text-align: left;
+  background-color: #9bab83;
+  box-shadow: 0 0 10px 5px #9bab83;
   max-width: 800px;
-  margin: auto;
+  margin: 30px auto;
 }
 
 .contact {
@@ -168,21 +171,21 @@ html, body, .app{
   z-index: 6;
 }
 
-.formContainer{
+.formContainer {
   display: flex;
   flex-flow: column;
   align-items: center;
   align-content: center;
 }
 
-.formError{
+.formError {
   color: red;
   font-size: 20px;
   transition: all .5s;
   overflow: hidden;
 }
 
-.contactForm{
+.contactForm {
   display: flex;
   min-height: calc(100vh - 200px);
   flex-flow: column;
@@ -191,25 +194,25 @@ html, body, .app{
   align-content: center;
 }
 
-.formFields{
+.formFields {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
 }
 
-.formField{
+.formField {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
   align-items: center;
 }
 
-.formField>*{
+.formField>* {
   margin: 2%;
 }
 
-.contactSubmit{
+.contactSubmit {
   display: flex;
   flex-flow: row wrap;
   flex-basis: 100%;
@@ -224,11 +227,11 @@ html, body, .app{
   margin: 20px;
 }
 
-.formField label{
+.formField label {
   width: 100px;
 }
 
-.formLabel{
+.formLabel {
   flex: 0 3 2%;
   font-size: 2.4em;
 }
@@ -241,7 +244,7 @@ html, body, .app{
   align-items: center;
 }
 
-footer{
+footer {
   background: #000516;
   position: relative;
   color: #EAEFFD;
@@ -252,7 +255,7 @@ footer{
   z-index: 99;
 }
 
-footer hr{
+footer hr {
   width: 50%;
   border: 0;
   height: 1px;
