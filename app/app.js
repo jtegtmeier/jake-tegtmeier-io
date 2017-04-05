@@ -39,8 +39,8 @@ class App extends React.Component {
       <div className={styles.app}>
         <nav className={styles.nav}>
           <Navlink activeClass={styles.navactive} className={styles.navlink} to="home" spy={true} smooth={true} duration={500} offset={-50}>Home</Navlink>
-          <Navlink activeClass={styles.navactive} className={styles.navlink} to="projects" spy={true} smooth={true} duration={500} offset={-50}>Projects</Navlink>
           <Navlink activeClass={styles.navactive} className={styles.navlink} to="about" spy={true} smooth={true} duration={500} offset={-50}>About</Navlink>
+          <Navlink activeClass={styles.navactive} className={styles.navlink} to="projects" spy={true} smooth={true} duration={500} offset={-50}>Projects</Navlink>
           <Navlink activeClass={styles.navactive} className={styles.navlink} to="contact" spy={true} smooth={true} duration={500} offset={-50}>Contact</Navlink>
           <a href="http://blog.tegtmeier.io/" activeClass={styles.navactive} className={styles.bloglink}>Blog</a>
         </nav>
@@ -61,6 +61,15 @@ class App extends React.Component {
             <li><a className={socstyles.socfcc} href="https://www.freecodecamp.com/jtegtmeier">(<FontAwesome name="fire"/>)</a></li>
             <li><a className={socstyles.socemail} href="mailto:devtegtmeier@gmail.com"><FontAwesome name="envelope-o"/></a></li>
           </ul>
+        </Element>
+        <Element name="about" className={styles.about}>
+          <p>
+            <b>Software Engineer</b> and <b>IT professional</b> interested in web development, computer networks, and information security. Designing scalable, responsive and secure software, with the user in mind, is my main focus.<br/><br/>
+
+            My work history is rich with web software development, routing protocols, network monitoring, and collaborative deployment of new computer networks. Currently my personal web projects revolve around responsive UI design, full-stack application development, and envisioning new patterns to make our apps more extendable, testable and secure.<br/><br/>
+
+            Languages, frameworks, and tools are not usually my main concern. Rather, I try to move forward with what works best for the situation based on the collective wisdom and iterative results of the team. I am always looking to connect with driven developers wanting to expand their understanding of CS fundamentals, web technologies, user experience, and information technology by building relationships, workflows, engaging software and ultimately new spaces for innovation.
+          </p>
         </Element>
         <Element name="projects" className={styles.projects}>
           <h1>Projects</h1>
@@ -94,12 +103,6 @@ class App extends React.Component {
               <h3>React/Firebase Chat Board</h3>
             </a>
           </div>
-        </Element>
-        <Element name="about" className={styles.about}>
-          <h1>About</h1>
-          <p>
-            <b>Software Engineer</b> and <b>IT professional</b> interested in web development, computer networks, and information security. Designing scalable, responsive and secure software, with the user in mind, is my main focus. My work history is rich with web software development, routing protocols, network monitoring, and collaborative deployment of new computer networks. Currently my personal web projects revolve around responsive UI design, full-stack application development, and envisioning new patterns to make our apps more extendable, testable and secure. Languages, frameworks, and tools are not usually my main concern. Rather, I try to move forward with what works best for the situation based on the collective wisdom and iterative results of the team. I am always looking to connect with driven developers wanting to expand their understanding of CS fundamentals, web technologies, user experience, and information technology by building relationships, workflows, engaging software and ultimately new spaces for innovation.
-          </p>
         </Element>
         <Element name="contact" className={styles.contact}>
           <h1>Contact</h1>
