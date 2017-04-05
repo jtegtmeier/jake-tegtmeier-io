@@ -78,6 +78,10 @@ class App extends React.Component {
               <img src={require('./img/BlogTegtmeierio.png')}/>
               <h3>Personal Blog</h3>
             </a>
+            <a className={styles.imgtile} href="http://comment.tegtmeier.io">
+              <img src={require('./img/commentHub.png')}/>
+              <h3>React/Firebase Chat Board</h3>
+            </a>
             <a className={styles.imgtile} href="http://codepen.io/jtegtmeier/full/yJzEwN">
               <img src={require('./img/PomodoroGraph.png')}/>
               <h3>Pomodoro Graph</h3>
@@ -97,10 +101,6 @@ class App extends React.Component {
             <a className={styles.imgtile} href="http://codepen.io/jtegtmeier/full/PNQaqV">
               <img src={require('./img/JSCalc9000.png')}/>
               <h3>JavaScript Calculator</h3>
-            </a>
-            <a className={styles.imgtile} href="http://comment.tegtmeier.io">
-              <img src={require('./img/commentHub.png')}/>
-              <h3>React/Firebase Chat Board</h3>
             </a>
           </div>
         </Element>
