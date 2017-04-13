@@ -57,7 +57,7 @@ class App extends React.Component {
             <a href="https://tegtmeier.io"><img className={styles.headshot} src={require('./img/headshot_bennington.jpg')}/></a>
             <li><a className={socstyles.socgithub} href="https://github.com/jtegtmeier"><FontAwesome name="github"/></a></li>
             <li><a className={socstyles.soclinkedin} href="https://www.linkedin.com/in/jacobtegtmeier"><FontAwesome name="linkedin"/></a></li>
-            <li><a className={socstyles.soctwitter} href="https://twitter.com/changerepeat"><FontAwesome name="twitter"/></a></li>
+            <li><a className={socstyles.soctwitter} href="https://twitter.com/jaketeg"><FontAwesome name="twitter"/></a></li>
             <li><a className={socstyles.socfcc} href="https://www.freecodecamp.com/jtegtmeier">(<FontAwesome name="fire"/>)</a></li>
             <li><a className={socstyles.socemail} href="mailto:devtegtmeier@gmail.com"><FontAwesome name="envelope-o"/></a></li>
           </ul>
@@ -116,7 +116,7 @@ class App extends React.Component {
           <ul className={socstyles.soc}>
             <li><a className={socstyles.socgithub} href="https://github.com/jtegtmeier"><FontAwesome name="github"/></a></li>
             <li><a className={socstyles.soclinkedin} href="https://www.linkedin.com/in/jacobtegtmeier"><FontAwesome name="linkedin"/></a></li>
-            <li><a className={socstyles.soctwitter} href="https://twitter.com/changerepeat"><FontAwesome name="twitter"/></a></li>
+            <li><a className={socstyles.soctwitter} href="https://twitter.com/jaketeg"><FontAwesome name="twitter"/></a></li>
             <li><a className={socstyles.socfcc} href="https://www.freecodecamp.com/jtegtmeier">(<FontAwesome name="fire"/>)</a></li>
             <li><a className={socstyles.socemail} href="mailto:devtegtmeier@gmail.com"><FontAwesome name="envelope-o"/></a></li>
           </ul>
