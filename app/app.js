@@ -35,14 +35,30 @@ class App extends React.Component {
   }
 
   render() {
+    const isSmooth = true;
+    const willSpy = true;
     return (
       <div className={styles.app}>
         <nav className={styles.nav}>
-          <Navlink activeClass={styles.navactive} className={styles.navlink} to="home" spy={true} smooth={true} duration={500} offset={-50}>Home</Navlink>
-          <Navlink activeClass={styles.navactive} className={styles.navlink} to="about" spy={true} smooth={true} duration={500} offset={-50}>About</Navlink>
-          <Navlink activeClass={styles.navactive} className={styles.navlink} to="projects" spy={true} smooth={true} duration={500} offset={-50}>Projects</Navlink>
-          <Navlink activeClass={styles.navactive} className={styles.navlink} to="contact" spy={true} smooth={true} duration={500} offset={-50}>Contact</Navlink>
-          <a href="http://blog.tegtmeier.io/" activeClass={styles.navactive} className={styles.bloglink}>Blog</a>
+          <Navlink activeClass={styles.navactive} className={styles.navlink}
+            to="home" spy={willSpy} smooth={isSmooth} duration={500} offset={-50}>
+            Home
+          </Navlink>
+          <Navlink activeClass={styles.navactive} className={styles.navlink}
+            to="about" spy={willSpy} smooth={isSmooth} duration={500} offset={-50}>
+            About
+          </Navlink>
+          <Navlink activeClass={styles.navactive} className={styles.navlink}
+            to="projects" spy={willSpy} smooth={isSmooth} duration={500} offset={-50}>
+            Projects</Navlink>
+          <Navlink activeClass={styles.navactive} className={styles.navlink}
+            to="contact" spy={willSpy} smooth={isSmooth} duration={500} offset={-50}>
+            Contact
+          </Navlink>
+          <a href="http://blog.tegtmeier.io/" activeClass={styles.navactive}
+            className={styles.bloglink}>
+            Blog
+          </a>
         </nav>
         <Element name="home" className={styles.home}>
           <div className={styles.banner}>
@@ -77,6 +93,10 @@ class App extends React.Component {
             <a className={styles.imgtile} href="http://blog.tegtmeier.io/">
               <img src={require('./img/BlogTegtmeierio.png')}/>
               <h3>Personal Blog</h3>
+            </a>
+            <a className={styles.imgtile} href="http://recipebook.tegtmeier.io/">
+              <img src={require('./img/RecipeBook.png')}/>
+              <h3>React Recipe Book App</h3>
             </a>
             <a className={styles.imgtile} href="http://comment.tegtmeier.io">
               <img src={require('./img/commentHub.png')}/>
