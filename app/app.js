@@ -82,7 +82,7 @@ class App extends React.Component {
           <p>
             I am a <b>Software Engineer</b> and <b>IT professional</b> active in web development, computer networks, and information security. Past roles have delt with software development, data mining, database managment, customer support, and collaborative deployment of computer networks and websites.<br/><br/>
 
-          Complex projects are not usually solved by selecting "the perfect" language, framework, or build tool. Rather, we push to move forward with what works best for the challenges at hand based on collective wisdom, user feedback and iterative results of the team. I look to connect with driven developers wanting to expand their understanding of design patterns, web technologies, user experience, efficient algorithms, and information security by building relationships, workflows, and engaging software that hopefully creates new spaces for innovation.
+          Complex projects are not usually solved by selecting "the perfect" language, framework, or build tool. Rather, I push to move forward with what works best for the challenges at hand based on collective wisdom, user feedback and iterative results of the team. I look to connect with driven developers wanting to expand their understanding of design patterns, web technologies, user experience, efficient algorithms, and information security by building relationships, workflows, and engaging software that hopefully creates new spaces for innovation.
           </p>
         </Element>
         <Element name="projects" className={styles.projects}>
