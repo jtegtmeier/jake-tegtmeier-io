@@ -103,7 +103,7 @@ class App extends React.Component {
             </a>
             <a className={styles.imgtile} href="http://codepen.io/jtegtmeier/full/yJzEwN">
               <img src={require('./img/PomodoroGraph.png')}/>
-              <h3>Pomodoro Graph</h3>
+              <h3>D3.js Pomodoro Graph</h3>
             </a>
             <a className={styles.imgtile} href="https://codepen.io/jtegtmeier/full/vKgjmz">
               <img src={require('./img/LocalWeatherApp.png')}/>
