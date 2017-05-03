@@ -151,15 +151,23 @@ html, body, .app {
   z-index: 7;
 }
 
-.about p {
+.about>p, .projects>p {
   padding: 20px;
   font-size: 18px;
   text-align: left;
-  background-color: #9fa868;
   border-radius: 5px;
-  box-shadow: 0 0 20px #9fa868;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 30px auto;
+}
+
+.about>p {
+  background-color: rgb(175, 169, 155);
+  box-shadow: 0 0 20px rgb(175, 169, 155);
+}
+
+.projects>p {
+  background-color: rgb(154, 170, 182);
+  box-shadow: 0 0 20px rgb(154, 170, 182);
 }
 
 .contact {

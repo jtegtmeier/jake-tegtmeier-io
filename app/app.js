@@ -80,15 +80,14 @@ class App extends React.Component {
         </Element>
         <Element name="about" className={styles.about}>
           <p>
-            <b>Software Engineer</b> and <b>IT professional</b> active in web development, computer networks, and information security. Collaboratively designing responsive, extendable, and secure web software, with the user in mind, is my main focus.<br/><br/>
+            I am a <b>Software Engineer</b> and <b>IT professional</b> active in web development, computer networks, and information security. Past roles have delt with software development, data mining, database managment, customer support, and collaborative deployment of computer networks and websites.<br/><br/>
 
-            My work history and education is rich with web software development, routing protocols, customer support, and collaborative deployment of computer networks and websites. Currently my personal web projects revolve around responsive UI design, data visualization, full-stack application development, and constructing data flow patterns to make code more extendable, testable and secure.<br/><br/>
-
-          Complex projects involving software cannot be solved by selecting "the perfect" language, framework, or build tool. Rather, we push to move forward with what works best for the challenges at hand based on collective wisdom, user feedback and iterative results of the team. I look to connect with driven developers wanting to expand their understanding of CS fundamentals, web technologies, user experience, and information technology by building relationships, workflows, engaging software that hopefully creates new spaces for innovation.
+          Complex projects are not usually solved by selecting "the perfect" language, framework, or build tool. Rather, we push to move forward with what works best for the challenges at hand based on collective wisdom, user feedback and iterative results of the team. I look to connect with driven developers wanting to expand their understanding of design patterns, web technologies, user experience, efficient algorithms, and information security by building relationships, workflows, and engaging software that hopefully creates new spaces for innovation.
           </p>
         </Element>
         <Element name="projects" className={styles.projects}>
           <h1>Projects</h1>
+          <p>My projects on this page revolve around responsive UI design, data visualization, full-stack application development, and constructing data flow patterns to make code more extendable, testable and secure.</p>
           <div className={styles.imgtiles}>
             <a className={styles.imgtile} href="http://blog.tegtmeier.io/">
               <img src={require('./img/BlogTegtmeierio.png')}/>
