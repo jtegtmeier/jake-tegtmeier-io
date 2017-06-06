@@ -1,8 +1,7 @@
 # jake-tegtmeier-io
 ### My personal portfolio project using express, webpack and react
 
-![FrontPage Image](/frontpage.png)
-Format: ![Alt Text](http://jake.tegtmeier.io/)
+![FrontPage Image](https://github.com/jtegtmeier/jake-tegtmeier-io/blob/master/frontpage.PNG?raw=true)
 
 * Responsive design, showcasing my web projects and skills
 * Uses a development and production webpack environment
